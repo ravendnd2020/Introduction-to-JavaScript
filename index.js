@@ -22,10 +22,7 @@ const votingAge = '18';
 if (votingAge >= 18) {
   console.log('True');
 }
-function votingAge(a){
-  if (a < 18)
-  console.log(Cannot Vote);
-}
+
 /*
 Task 1b - Values
 
@@ -39,6 +36,7 @@ Do the following:
 const constOne = '1';
 const constTwo = '2';
 if (constOne < constTwo) {
+    constOne +=
   console.log (true);
 }
 
@@ -70,9 +68,9 @@ Do the following:
 
 
 function multiply(x, y) {
-  return x * y;
+  console.log(x * y);
 }
-multiply(6 * 9);
+multiply(6, 9);
 
 
 
@@ -90,6 +88,7 @@ Do the following:
 const dogeYears = function(humanYears){
   let dogeYears = 7 * humanYears;
   console.log(dogeYears);
+  return dogeYears;
 }
 
 
@@ -119,29 +118,25 @@ Use the hungryDog function and feeding requirements below to do the following:
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
-function hungryDog(weight, age){
-      if (age > 1 && weight <= 5){
-          weight / 5%;
-            }
-          else if (age > 1 && weight <= 10){
-                weight / 4%;
-            }
-            else if (age > 1 && weight <= 15){
-              weight / 3%;
-            }
-            else (age > 1 && weight <= 15){
-              weight / 2%;
-            }
-      if (age < 1 && age <= .4 {
-        weight / 10%;
-            }
-           else if (age < 1 && age <= .7 {
-              weight / 5%;
-            }
-           else if (age < 1 && age <= 1 {
-              weight / 4%;
-            }
-    console.log(hungryDog);
+function hungryDog(years, weight){
+  let rawWeight = 0;
+  if (years >= 1 && weight <= 5){
+    return (weight * .05);
+  } else if (years >= 1 && weight >= 6 && weight <= 10){
+    return (weight * .04);
+  } else if (years >= 1 && weight >= 10 && weight <= 15){
+    return (weight * .03);
+  } else if (years >= 1 && weight >15){
+    return (weight * .02);
+  } else if (years < 4 / 12 && years >= 2 /12){
+    return (weight * .10);
+  } else if (years > 4 / 12 && years <=  7 / 12){
+    return (weight * .05);
+  } else if (years > 7 / 12 && years < 1 ){
+    return (weight * .04);
+}
+return rawFoodWeight;
+} 
 
    
 
@@ -169,39 +164,41 @@ Use the game function below to do the following:
 
 
 function game(user, computer){
-    if (user === computer){
+    if (user == computer){
       return "tie";
-
-
-    if (user === 'rock'){
-        if (computer === 'paper') return 'lose';
-      }else return 'Win';
     }
 
-    if (user === 'paper') {
-      if (computer === 'scissors') return 'lose';
-    } else return 'Win';
+    if (user == 'rock'){
+        if (computer == 'paper') return 'lose';
+      }else 
+        return 'Win';
+
+    if (user == 'paper') {
+      if (computer == 'scissors') return 'lose';
+    } else {
+      return 'Win';
     }
 
-    if (user === 'scissors'){
-      if (computer === 'rock') return 'lose';
-      else return 'Win';
+    if (user == 'scissors'){
+      if (computer == 'rock') return 'lose';
+      else {
+        return 'Win';
     }
 
     //computer options
 
     let randomNum = Math.random();
-    let computer = "";
+    let computer = '';
 
 
     if (randomNum <= 1/3){
       computer = 'rock';
     }
     else if (randomNum <= 2/3){
-      computer = 'paper'
+      computer = 'paper';
     }
     else {
-      computer = 'scissors'
+      computer = 'scissors';
     }
 
   
